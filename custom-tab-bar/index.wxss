@@ -1,4 +1,0 @@
-/* custom-tab-bar/index.wxss */
-.tabbar {
-  height: 100rpx;
-}

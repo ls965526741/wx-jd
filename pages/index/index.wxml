@@ -14,3 +14,4 @@
   </view>
   <van-toast id="van-toast" />
 </view>
+<view class="savepadding "></view>

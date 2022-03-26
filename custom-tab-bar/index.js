@@ -1,7 +1,5 @@
-import { storeBindingsBehavior } from 'mobx-miniprogram-bindings'
-import { store } from '../store/index'
+const { tabBar } = require('../app')
 Component({
-  behaviors: [storeBindingsBehavior],
   data: {
     list: [
       {
@@ -28,24 +26,30 @@ Component({
         iconPath: 'static/navBar/geren.png',
         selectedIconPath: 'static/navBar/geren_active.png'
       }
-    ]
+    ],
+    active: 0
   },
-  storeBindings: {
-    store,
-    fields: {
-      active: () => store.tabbarCurrentPage
-    },
-    actions: {
-      setActive: 'setTabbarCurrentPage'
-    }
-  },
-
   methods: {
     onChange(event) {
       wx.switchTab({
         url: `/${this.data.list[event.detail].pagePath}`
       })
-      this.setActive(event.detail)
+      this.setData({ active: event.detail })
+    }
+  },
+  lifetimes: {
+    created() {
+      console.log(tabBar)
+    },
+    ready() {
+      var obj = this.createSelectorQuery()
+      obj
+        .select('.van-tabbar')
+        .boundingClientRect(function (rect) {
+          console.log('获取tabBar元素的高度', rect)
+          wx.setStorageSync('tabBarHeight', rect.height) // 将获取到的高度设置缓存，以便之后使用
+        })
+        .exec()
     }
   }
 })

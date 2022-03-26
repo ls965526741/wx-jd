@@ -79,6 +79,7 @@ Page({
   onReady: function () {},
 
   onShow: function () {
+    this.getTabBar().setData({ active: 2 })
     const token = wx.getStorageSync('token')
     if (!token) {
       this.setData({ list: [], isLogin: false })

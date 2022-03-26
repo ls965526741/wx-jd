@@ -60,7 +60,9 @@ Page({
 
   onReady: function () {},
 
-  onShow: function () {},
+  onShow: function () {
+    this.getTabBar().setData({ active: 1 })
+  },
 
   onHide: function () {},
 
