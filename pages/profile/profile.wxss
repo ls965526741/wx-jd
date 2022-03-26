@@ -1,0 +1,80 @@
+.user-info {
+  width: 100%;
+  height: 352rpx;
+  box-sizing: border-box;
+  background-size: cover;
+
+}
+
+.user-info image {
+  width: 100%;
+  z-index: -1;
+  position: fixed;
+  background-size: 100% 100%;
+}
+
+.is-login {
+  display: flex;
+  padding-top: 60rpx;
+  padding-left: 40rpx;
+}
+
+.cente {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding-left: 10rpx;
+}
+
+.integral {
+  font-size: 20rpx;
+}
+
+.integral text {
+  padding-right: 16rpx;
+}
+
+.user-name {
+  font-size: 36rpx;
+}
+
+.user-name view {
+  width: 140px;
+  white-space: normal;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.user-img {
+  width: 120rpx;
+  height: 120rpx;
+}
+
+.user-img image {
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 20rpx;
+  overflow: hidden;
+}
+
+.no-login {
+  padding-top: 60rpx;
+  padding-left: 40rpx;
+}
+
+.no-login text {
+  padding-left: 10rpx;
+}
+
+.no-login navigator {
+  display: inline;
+}
+
+.no-login view {
+  font-size: 24rpx;
+  padding-top: 10rpx;
+}
+
+.van-cell-group {
+  margin-top: 10rpx;
+}

@@ -1,0 +1,19 @@
+.home {
+  padding-bottom: 100rpx;
+}
+
+.tab {
+  position: relative;
+}
+
+.classify {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 44px;
+  line-height: 44px;
+  background-color: #fff;
+  padding: 0 5px;
+  font-size: 14px;
+  z-index: 2;
+}

@@ -1,0 +1,31 @@
+<view class="new-product">
+  <swiper autoplay indicator-dots circular indicator-active-color="#36fb44">
+    <swiper-item wx:for="{{swiperList}}" wx:key="index">
+      <image src="{{item.image}}" mode="heightFix"></image>
+    </swiper-item>
+  </swiper>
+  <view class="title">今日新品</view>
+  <van-sticky>
+    <view class="sort">
+      <view>
+        <text>综合排序</text>
+        <van-icon name="arrow-down" wx:if="{{addSynth}}" />
+        <van-icon name="arrow-up" wx:if="{{!addSynth}}" />
+      </view>
+      <view>
+        <text>销量</text>
+        <van-icon name="arrow-down" wx:if="{{addSale}}" />
+        <van-icon name="arrow-up" wx:if="{{!addSale}}" />
+      </view>
+      <view>
+        <text>价格</text>
+        <van-icon name="arrow-down" wx:if="{{addPrice}}" />
+        <van-icon name="arrow-up" wx:if="{{!addPrice}}" />
+      </view>
+    </view>
+  </van-sticky>
+
+  <goods-detail list="{{goodsList}}" />
+</view>
+<van-toast id="van-toast" />
+<van-loading color="#1989fa" />

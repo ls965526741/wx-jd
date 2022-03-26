@@ -1,0 +1,35 @@
+.header {
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  height: 80rpx;
+  padding-bottom: 8rpx;
+  box-sizing: border-box;
+}
+
+.header van-search {
+  flex: 1;
+  padding: 2px 0;
+}
+
+.header .header-right {
+  padding: 0 5px;
+}
+
+.main {
+  display: flex;
+}
+
+.main .side-bar {
+  /* position: fixed;
+  left: 0;
+  bottom: 0; */
+  height: calc(100vh - 80rpx);
+  overflow-y: scroll;
+}
+
+.main .main-item {
+  height: calc(100vh - 80rpx);
+  overflow-y: scroll;
+  flex: 1;
+}

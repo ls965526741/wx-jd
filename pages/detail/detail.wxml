@@ -1,0 +1,29 @@
+<view class="detail">
+  <swiper class="swiper" indicator-dots indicator-active-color="#36fb44" autoplay circular>
+    <swiper-item wx:for="{{swiperList}}" wx:key="index">
+      <image src="{{item.image_url}}" mode="aspectFill"></image>
+    </swiper-item>
+  </swiper>
+  <view class="goods-info">
+    <view>{{ goodsInfo.name }}</view>
+    <view class="goods-price">
+      <view class="goods-price-item">￥{{ goodsInfo.price }}</view>
+      <van-button type="danger" size="small">降价通知</van-button>
+    </view>
+  </view>
+  <van-cell-group>
+    <van-nav-bar title="店铺信息" />
+    <van-cell title="店铺名" value="{{goodsInfo.shop_info.address}}" />
+    <van-cell title="所在地" value="{{goodsInfo.shop_info.name}}" />
+  </van-cell-group>
+  <van-cell-group>
+    <van-nav-bar title="商品详情" />
+    <van-cell wx:for="{{parameter}}" wx:key="index" title="{{item[0]}}" value="{{item[1]}}" />
+  </van-cell-group>
+  <!-- 底部导航栏 -->
+  <van-submit-bar price="{{ goodsInfo.price*100  }}" button-text="添加购物车" bind:submit="addCart" tip="{{ true }}">
+    <van-tag type="primary">客服</van-tag>
+    <van-tag type="primary">购物车</van-tag>
+  </van-submit-bar>
+</view>
+<van-dialog id="van-dialog" />

@@ -1,0 +1,39 @@
+/* pages/menu/menu.wxss */
+.new-product {
+  padding-bottom: 100rpx;
+}
+
+.new-product image {
+  border-radius: 20rpx;
+  overflow: hidden;
+  height: 100%;
+}
+
+.new-product swiper-item {
+  text-align: center;
+}
+
+.sort {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 40px;
+  font-size: 14px;
+  background-color: #fff;
+
+}
+
+.title {
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  color: #ccc;
+  background-color: #fff;
+  font-size: 20px;
+}
+
+.sort view {
+  text-align: center;
+  flex: 1;
+}

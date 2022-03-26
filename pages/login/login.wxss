@@ -1,0 +1,8 @@
+/* pages/login/login.wxss */
+.go-register {
+  display: block;
+  direction: rtl;
+  padding: 5px;
+  font-size: 12px;
+  color: #ccc;
+}

@@ -1,0 +1,12 @@
+<view>
+  <van-cell-group>
+    <van-field model:value="{{ username }}" auto-focus bind:blur="validateUserName" required clearable error-message="{{errorUserName}}" label="用户名" placeholder="请输入用户名" />
+    <van-field model:value="{{ password }}" type="password" bind:blur="validatePwd" error-message="{{errorPwd}}" label="密码" placeholder="请输入密码" required border="{{ false }}" />
+  </van-cell-group>
+  <view style="margin: 16px">
+    <van-button round block type="danger" bind:click="login">登陆</van-button>
+  </view>
+  <navigator class="go-register">忘记密码</navigator>
+  <navigator class="go-register" url="/pages/register/register">去注册</navigator>
+  <van-toast id="van-toast" />
+</view>

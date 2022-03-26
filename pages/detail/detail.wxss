@@ -1,0 +1,40 @@
+/* pages/detail/detail.wxss */
+.swiper {
+  height: 400rpx;
+}
+
+.swiper swiper-item {
+  text-align: center;
+}
+
+.swiper image {
+  width: 700rpx;
+  height: 100%;
+  border-radius: 20rpx;
+  overflow: hidden;
+}
+
+.goods-info {
+  border-radius: 10px;
+  background-color: #fff;
+  margin: 5px;
+  padding: 5px;
+
+}
+
+.goods-info .goods-price {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+}
+
+.goods-info .goods-price-item {
+  color: red;
+  padding: 5px 0;
+  font-size: 14px;
+}
+
+.van-tag {
+  margin-right: 10rpx;
+}

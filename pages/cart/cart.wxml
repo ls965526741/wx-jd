@@ -1,0 +1,33 @@
+<view class="cart" wx:if="{{isLogin}}">
+  <van-swipe-cell wx:for="{{list}}" wx:key="goods_id" right-width="{{ 40 }}">
+    <view class="cart-content">
+      <!-- 复选框 -->
+      <view class="checkbox">
+        <van-checkbox value="{{ item.selected }}" data-index="{{index}}" bind:change="onChangeSelected"></van-checkbox>
+      </view>
+      <!-- 商品卡片 -->
+      <van-card tag="新品" price="{{item.good.uprice}}" title="{{item.good.name}}" thumb="{{ item.good.img_url }}">
+        <view slot="footer">
+          <!-- 进步器 -->
+          <van-stepper theme="round" min="0" button-size="40rpx" value="{{ item.goods_num }}" async-change data-index="{{index}}" bind:change="changeNumber" />
+        </view>
+      </van-card>
+    </view>
+    <view slot="right" class="delete-button" data-index="{{item.goods_id}}" bindtap="removeList">
+      删除
+    </view>
+  </van-swipe-cell>
+  <view class="submit-bar">
+    <van-checkbox class="left" value="{{ checked }}" bind:change="checkAll">全选</van-checkbox>
+    <view class="price">价格：{{allPrice}}</view>
+    <view class="right">下单</view>
+  </view>
+</view>
+<view wx:if="{{!isLogin}}">
+  <view class="noLogin">
+    <view>您还没登陆！请先登陆</view>
+    <navigator url="/pages/login/login?redirect=true">去登陆</navigator>
+  </view>
+</view>
+<van-toast id="van-toast" />
+<van-dialog id="van-dialog" />

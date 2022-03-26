@@ -1,0 +1,16 @@
+<view class="catgory">
+  <view class="header">
+    <van-search v-model="keyword" shape="round" placeholder="请输入搜索关键词" />
+    <view class="header-right">
+      <van-icon name="scan" />
+    </view>
+  </view>
+  <view class="main">
+    <van-sidebar active-key="{{ activeKey }}" class="side-bar">
+      <van-sidebar-item wx:for="{{categoryList}}" wx:key="id" data-index="{{item.id}}" bindtap="sidebarChange" title="{{item.name}}" />
+    </van-sidebar>
+    <view class="main-item">
+      <goods-detail list="{{list}}" />
+    </view>
+  </view>
+</view>

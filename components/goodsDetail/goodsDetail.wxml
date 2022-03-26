@@ -1,0 +1,12 @@
+<view class="recommend">
+  <view class="detail">
+    <!-- data-id="{{item.id}}" bindtap="toDetail" -->
+    <navigator url="/pages/detail/detail?id={{item.id}}" class="detail-item" wx:for="{{list}}" wx:key="id">
+      <image src="{{item.img_url}}" mode="widthFix" alt="" />
+      <view class="detail-name">
+        <view>{{ item.name }}</view>
+      </view>
+      <view class="detail-price">{{item.price}}</view>
+    </navigator>
+  </view>
+</view>

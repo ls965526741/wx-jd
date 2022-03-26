@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "goods-detail": "../../components/goodsDetail/goodsDetail"
+  },
+  "navigationBarTitleText": "商品分类",
+  "enablePullDownRefresh": true,
+  "backgroundTextStyle": "dark"
+}

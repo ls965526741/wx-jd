@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "goods-detail": "/components/goodsDetail/goodsDetail"
+  },
+  "enablePullDownRefresh": true,
+  "backgroundTextStyle": "dark",
+  "navigationBarTitleText": "主页",
+  "onReachBottomDistance": 100
+}

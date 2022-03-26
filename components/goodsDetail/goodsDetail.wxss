@@ -1,0 +1,46 @@
+/* components/goodsDetail/goodsDetail.wxss */
+.recommend {
+  background-color: #f8f9f9;
+  width: 100%;
+  padding: 16rpx 16rpx 0 16rpx;
+  box-sizing: border-box;
+}
+
+.detail {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  justify-content: space-between;
+}
+
+.detail-item {
+  width: 49%;
+  border-radius: 20rpx;
+  overflow: hidden;
+  background-color: #fff;
+  margin-bottom: 16rpx;
+}
+
+.detail-name {
+  padding: 10rpx;
+}
+
+.detail-name view {
+  font-size: 28rpx;
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.detail-price {
+  color: red;
+  padding: 5px;
+}
+
+image {
+  width: 100%;
+}

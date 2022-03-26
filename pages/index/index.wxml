@@ -1,0 +1,16 @@
+<view class="home">
+  <view class="tab">
+    <view class="tab-item">
+      <van-tabs active="{{ active }}" bind:change="onChange">
+        <van-tab title=" {{item.name}}" name="{{item.id}}" wx:for="{{categoryList}}" wx:key="id"></van-tab>
+      </van-tabs>
+    </view>
+    <view class="classify" bindtap="toMenu">
+      <van-icon name="eye-o" />分类
+    </view>
+  </view>
+  <view class="main">
+    <goods-detail list="{{detailList}}" />
+  </view>
+  <van-toast id="van-toast" />
+</view>
